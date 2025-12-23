@@ -231,7 +231,7 @@ def show_city(city):
     pastatai = ", ".join(f"{b} x{c}" for b, c in counts.items()) if counts else "Nėra"
     print("Pastatai:", pastatai)
     print(kita_diena(city))
-    print(f"Kataklizmo šansas: {city["kataklizmas"]}")
+    print(f"Kataklizmo šansas: {city["kataklizmas"]}%")
 
 
 skills = {
@@ -249,6 +249,7 @@ def skilu_pirkimas(city, skills):
     skill = input("Įvesk skill pavadinimą: ")
     if skill not in skills:
         print("Tokio skill nėra")
+        input("Paspausk ENTER, kad tęsti...")
         return
     s = skills[skill]
     if s["atrakinta"]:
@@ -304,8 +305,8 @@ while True:
         print("6 - Statyti Poseidono vilą (150)")
         print("7 - Statyti elementų malšintoją(200)")
         print("\nSkill tree")
-        print("8 - Pastatu kainos I (200) Mažina pastatų kainas ant 10%")
-        print("9 - Pastatu kainos II (600) Reikia turėti Pastatu kainos I. Mažina pastatų kainas ant 35% ")
+        print("8 - pastatu kainos I (200) Mažina pastatų kainas ant 10%")
+        print("9 - pastatu kainos II (600) Reikia turėti Pastatu kainos I. Mažina pastatų kainas ant 35% ")
         print("10 - ekologija I (100) Mažina fabriku išleidžiama taršą ant 10")
         print("11 - ekologija II (350) Reikia turėti ekologija I.  Mažina fabriku išleidžiama taršą ant 19")
         print("12 - anti kataklizminiai fabrikai I (200) Mažina kataklizmo šansa ant 10 (veikia tik su fabrikais)9")
@@ -324,13 +325,13 @@ while True:
         print("6 - Statyti Raudonojo Mėnulio Užeiga (150)")
         print("7 - Statyti medžioklinės nakties vengyklą(200)")
         print("\nSkill tree")
-        print("8 - Pastatu kainos I (200) Mažina pastatų kainas ant 10%")
-        print("9 - Pastatu kainos II (600) Reikia turėti Pastatu kainos I. Mažina pastatų kainas ant 35% ")
+        print("8 - pastatu kainos I (200) Mažina pastatų kainas ant 10%")
+        print("9 - pastatu kainos II (600) Reikia turėti Pastatu kainos I. Mažina pastatų kainas ant 35% ")
         print("10 - ekologija I (100) Mažina fabriku išleidžiama taršą ant 10")
         print("11 - ekologija II (350) Reikia turėti ekologija I.  Mažina fabriku išleidžiama taršą ant 19")
         print("12 - anti kataklizminiai fabrikai I (200) Mažina kataklizmo šansa ant 10 (veikia tik su fabrikais)9")
         print("13 - anti kataklizminiai fabrikai II (500) Reikia turėti anti kataklizminiai fabrikai I.  Mažina kataklizmo šansa ant 15 (veikia tik su fabrikais)9")
-        print("14 - happy I (300)  Didina gaunama gyventojų džiaugsmą ant 5 (veikia tik su namu, eko namy ir vėjo jėgainėmis)")
+        print("14 - happy I (300)  Didina gaunama gyventojų džiaugsmą ant 5 (veikia tik su namu, eko namu ir vėjo jėgainėmis)")
         print("15 - happy II (850) Reikia turėti happy I.  Didina gaunama gyventojų džiaugsmą ant 8 (veikia tik su namu, eko namu ir vėjo jėgainėmis)3")   
         print("0 - Išeiti")
         print("Paspauskite ENTER, kad patekti į kitą dieną.")
@@ -350,7 +351,7 @@ while True:
         print("11 - ekologija II (350) Reikia turėti ekologija I.  Mažina fabriku išleidžiama taršą ant 19")
         print("12 - anti kataklizminiai fabrikai I (200) Mažina kataklizmo šansa ant 10 (veikia tik su fabrikais)9")
         print("13 - anti kataklizminiai fabrikai II (500) Reikia turėti anti kataklizminiai fabrikai I.  Mažina kataklizmo šansa ant 15 (veikia tik su fabrikais)9")
-        print("14 - happy I (300)  Didina gaunama gyventojų džiaugsmą ant 5 (veikia tik su namu, eko namy ir vėjo jėgainėmis)")
+        print("14 - happy I (300)  Didina gaunama gyventojų džiaugsmą ant 5 (veikia tik su namu, eko namu ir vėjo jėgainėmis)")
         print("15 - happy II (850) Reikia turėti happy I.  Didina gaunama gyventojų džiaugsmą ant 8 (veikia tik su namu, eko namu ir vėjo jėgainėmis)3")   
         print("0 - Išeiti")
         print("Paspauskite ENTER, kad patekti į kitą dieną.")
@@ -383,9 +384,13 @@ while True:
         secret_ending_2(city)
         city.type = "yharnam"
         input("Paspausk ENTER, kad tęsti žaidimą Yharname")
+    elif choice not in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11","12","13", "14", "15", "0"]:
+        print("Tokio pasirinkimo nėra.")
+        input("Paspausk ENTER, kad tęsti...")
     elif choice == "0":
         print("Ačiū, kad žaidėte!")
         break
+    
 
     if city["tarša"] >= 100:
         print(f"\n Jūsų miesto taršos lygis pakilo taip stipriai, kad miesto išlaikyti nebeįmanoma.\n Išlaikėtė miestą {city["diena"]} dienų.\n Turėjote {city["pinigai"]} pinigų.\n Gyventojų džiaugsmo lygis buvo {city["happy"]}.\n Jūsų miesto gyventojų pajamos: {income}.\n Štai kokius pastatus turėjote: {counts}.\n Ačiū, kad žaidėte!")
