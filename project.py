@@ -8,7 +8,7 @@ class City:
     def __init__(self):
         self.diena = 1
         self.populiacija = 10
-        self.pinigai = 10000
+        self.pinigai = 100
         self.tarša = 0
         self.buildings = []
         self.kataklizmas = 0
