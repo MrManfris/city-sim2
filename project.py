@@ -8,7 +8,7 @@ class City:
     def __init__(self):
         self.diena = 1
         self.populiacija = 10
-        self.pinigai = 100
+        self.pinigai = 10000
         self.tarša = 0
         self.buildings = []
         self.kataklizmas = 0
@@ -126,11 +126,11 @@ def build(city, building_type):
 def kita_diena(city):
     global income
     income = 0
-    fabrikai = ["fabrikas", "trišakių darykla", "saw cleaverių darykla"]
+    fabrikai = ["Fabrikas", "Trišakių darykla", "Saw cleaverių darykla"]
 
 
     for b in city["buildings"]:
-        if b.lower() in fabrikai:
+        if b in fabrikai:
             if city["happy"] > 40:
                 income += 10
             else:
@@ -187,25 +187,16 @@ def kita_diena(city):
    
     reduction = 0
     if "Vėjo jėgainės" in city["buildings"]:
-        reduction += 10 
-    if skills["ekologija_I"]["atrakinta"] == True:
         reduction += 10
-    if skills["ekologija_II"]["atrakinta"] == True:
-        reduction += 19
-    city["tarša"] -= reduction
-    if city["tarša"] < 0:
-        city["tarša"] = 0
-
-    
     if "Ekologiški namai" in city["buildings"]:
-        city["tarša"] -= 10
-    if skills["ekologija_I"]["atrakinta"] == True:
         reduction += 10
-    if skills["ekologija_II"]["atrakinta"] == True:
+    if skills["ekologija_I"]["atrakinta"]:
+        reduction += 10
+    if skills["ekologija_II"]["atrakinta"]:
         reduction += 19
-    city["tarša"] -= reduction
-    if city["tarša"] < 0:
-        city["tarša"] = 0
+
+    city["tarša"] = max(0, city["tarša"] - reduction)
+
         
 def check_kataklizmas(city):
     if city["kataklizmas"] <= 0:
@@ -230,13 +221,16 @@ def show_city(city):
     counts = Counter(city["buildings"])
     pastatai = ", ".join(f"{b} x{c}" for b, c in counts.items()) if counts else "Nėra"
     print("Pastatai:", pastatai)
-    print(kita_diena(city))
-    print(f"Kataklizmo šansas: {city["kataklizmas"]}%")
+
+   
+    kita_diena(city)
+
+    print(f"Kataklizmo šansas: {city['kataklizmas']}%")
 
 
 skills = {
     "pastatu_kainos_I": {"kaina": 200, "atrakinta": False, "reikia": None},
-    "pastatu_kainos_II": {"kaina": 600, "atrakinta": False, "reikia": "Pastatu_kainos_I"},
+    "pastatu_kainos_II": {"kaina": 600, "atrakinta": False, "reikia": "pastatu_kainos_I"},
     "ekologija_I": {"kaina": 100, "atrakinta": False, "reikia": None},
     "ekologija_II": {"kaina": 350, "atrakinta": False, "reikia": "ekologija_I"},
     "anti_kat_fabrikai_I": {"kaina": 200, "atrakinta": False, "reikia": None},
@@ -255,11 +249,13 @@ def skilu_pirkimas(city, skills):
     if s["atrakinta"]:
         print("Jau toki skill turite")
         return
-    if s["reikia"] and not skills[s["reikia"]]["atrakinta"]:
+    if s["reikia"] and not skills.get(s["reikia"], {}).get("atrakinta", False):
         print(f"Reikia šito {s['reikia']}, kad atrakinti šį skill.")
+        input("Paspausk ENTER, kad tęsti...")
         return
     if city["pinigai"] < s["kaina"]:
         print("Neužtenka pinigų")
+        input("Paspausk ENTER, kad tęsti...")
         return
     city["pinigai"] -= s["kaina"]
     s["atrakinta"] = True
@@ -315,7 +311,7 @@ while True:
         print("15 - happy II (850) Reikia turėti happy I.  Didina gaunama gyventojų džiaugsmą ant 8 (veikia tik su namu, eko namu ir vėjo jėgainėmis)3")   
         print("0 - Išeiti")
         print("Paspauskite ENTER, kad patekti į kitą dieną.")
-        print("Kai perkate skill ir jums rašo įrašykite skill pavadinimą  rašykite taip: Pastatu_kainos_II\n")
+        print("Kai perkate skill ir jums rašo įrašykite skill pavadinimą  rašykite taip: pastatu_kainos_II\n")
     elif city.type == "yharnam":
         print("\nVeiksmai:")
         print("1 - Statyti Išgyventojų namą (50)")
@@ -335,7 +331,7 @@ while True:
         print("15 - happy II (850) Reikia turėti happy I.  Didina gaunama gyventojų džiaugsmą ant 8 (veikia tik su namu, eko namu ir vėjo jėgainėmis)3")   
         print("0 - Išeiti")
         print("Paspauskite ENTER, kad patekti į kitą dieną.")
-        print("Kai perkate skill ir jums rašo įrašykite skill pavadinimą  rašykite taip: Pastatu_kainos_II\n")
+        print("Kai perkate skill ir jums rašo įrašykite skill pavadinimą  rašykite taip: pastatu_kainos_II\n")
     else:
         print("\nVeiksmai:")
         print("1 - Statyti namą (50)")
@@ -355,7 +351,7 @@ while True:
         print("15 - happy II (850) Reikia turėti happy I.  Didina gaunama gyventojų džiaugsmą ant 8 (veikia tik su namu, eko namu ir vėjo jėgainėmis)3")   
         print("0 - Išeiti")
         print("Paspauskite ENTER, kad patekti į kitą dieną.")
-        print("Kai perkate skill ir jums rašo įrašykite skill pavadinimą  rašykite taip: Pastatu_kainos_II\n")
+        print("Kai perkate skill ir jums rašo įrašykite skill pavadinimą  rašykite taip: pastatu_kainos_II\n")
 
     choice = input("Pasirink: ")
 
@@ -401,6 +397,10 @@ while True:
     if city["happy"] <= 0:
         print(f"\nGyventojai nekenčia šio miesto ir emigravo į kitus miestus .\n Išlaikėtė miestą {city["diena"]} dienų.\n Turėjote {city["pinigai"]} pinigų.\n Jūsų miesto gyventojų pajamos: {income}.\n Štai kokius pastatus turėjote: {counts}.\n Ačiū, kad žaidėte!")
         break
-    if city["pinigai"] >= 100000:
-        print(f"Jūsų miestas augo ir vis dar auga ir atneša didelius pinigus! Jums pavyko išlaikyti miestą ir padaryti jį vienu iš geriausiu miestu pasaulyje! Iki miesto išlaikėte miestą {city["diena"]} dienų.\n Turėjote {city["pinigai"]} pinigų.Gyventojų džiaugsmo lygis buvo {city["happy"]}\n Jūsų miesto gyventojų pajamos: {income}.\n Štai kokius pastatus turėjote: {counts}.\n Ačiū, kad žaidėte!")
+    
+    if city["populiacija"] >= 1000 and city["pinigai"] >= 100000:
+        print(f"\nJusu miestas augo  ir augs.Visko užtenka pinigų, bei namų ir jūsų miestas tapo vienu iš geriausiai augančių miestų pasaulyje!.\n Išlaikėtė miestą {city["diena"]} dienų.\n Turėjote {city["pinigai"]} pinigų.\n Jūsų miesto gyventojų pajamos: {income}.\n Štai kokius pastatus turėjote: {counts}.\n Ačiū, kad žaidėte!")
+        break
+    if city["populiacija"] > 1000 and city["pinigai"] <= 100000 :
+        print(f"\nMiestas auga, bet gyventojų daug, o pinigų trūksta ir jūsų miestas nebeišsilaiko ir žmonės pradėjo emigruoti į kitus miestus.\n Išlaikėtė miestą {city["diena"]} dienų.\n Turėjote {city["pinigai"]} pinigų.\n Jūsų miesto gyventojų pajamos: {income}.\n Štai kokius pastatus turėjote: {counts}.\n Ačiū, kad žaidėte!")
         break
