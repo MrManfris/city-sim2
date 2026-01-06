@@ -4,7 +4,11 @@ Visi pasirinkimai turi savo pasekmes statai namą padidėja pajamos ir gyventoja
 
 Pagrindinė užduotis yra prižiūrėti miestą ir gauti vieną iš endingų. 1 endingui reikia surinkti 1000 gyventojų ir 1000000 pinigų arba daugiau . Antrame reikia turėti 1000 gyventojų arba daugiau ir reikia surinkti mažiau negu 1000000 pinigų.
 
-Yra 2 secretai viena iš secretų rasite ufxnwnspnrztxj, sjx ojn ljwfn įxnžnūwėxnyj ufrfydxnyj ywnx xpfnčnzx pzwntx wjnpnf įwfšdyn į ufxnwnspnrzx, t pnyfr wjnpnf anjsf xpfnčnų ufpjnxyn pnyz. (Cezario šifras raktas  SSSSSSS5SSSSSS kažkur  tarp S raidžių)
+Yra 3 secretai viena iš secretų rasite ufxnwnspnrztxj, sjx ojn ljwfn įxnžnūwėxnyj ufrfydxnyj ywnx xpfnčnzx pzwntx wjnpnf įwfšdyn į ufxnwnspnrzx, t pnyfr wjnpnf anjsf xpfnčnų ufpjnxyn pnyz. (Cezario šifras raktas  SSSSSSS5SSSSSS kažkur  tarp S raidžių)
+
+KAD ATRAKINTI  3 PASLAPTINGIAUSIA SECRET TURITE Rhk hayhrpuap thuv tfsptphbzph tplzaą įyhšfrpal 35.39774 rchkyhab qlp nhbuhzp nhsl 0,99999 whyhšfrpal     į ufwnspynx xzfuafqnsyf xpfnčnų uae. gzat 3333,9999 yzwn gūyn 3334 Čia yra hintas kaip gauti atsakymą ir atrakinti tą 
+
+MEGA SUPER DUPER SECRET įsidemėkite į tarpą, nes tai kažką atskiria (Raides kurios eina po tarpo tame užšifruotame hinte reikia iššifruoti su preitu Cezario raktu, o prieš tarpą su kitokiu raktu. Raikto numeris yra virš 5. )
 
 Prašau rašykite skillų pavadinimus iš mažosios raidės ir prašau  naudokite tarp žodžių "_" pvz. pastatu_kainos_I
 
