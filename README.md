@@ -6,7 +6,13 @@ Pagrindinė užduotis yra prižiūrėti miestą ir gauti vieną iš endingų. 1 
 
 Yra 3 secretai viena iš secretų rasite ufxnwnspnrztxj, sjx ojn ljwfn įxnžnūwėxnyj ufrfydxnyj ywnx xpfnčnzx pzwntx wjnpnf įwfšdyn į ufxnwnspnrzx, t pnyfr wjnpnf anjsf xpfnčnų ufpjnxyn pnyz. (Cezario šifras raktas  SSSSSSS5SSSSSS kažkur  tarp S raidžių)
 
-KAD ATRAKINTI  3 PASLAPTINGIAUSIA SECRET TURITE Rhk hayhrpuap thuv tfsptphbzph tplzaą įyhšfrpal 35.39774 rchkyhab qlp nhbuhzp nhsl 0,99999 whyhšfrpal     į ufwnspynx xzfuafqnsyf xpfnčnų uae. gzat 3333,9999 yzwn gūyn 3334 Čia yra hintas kaip gauti atsakymą ir atrakinti tą 
+KAD ATRAKINTI  3 PASLAPTINGIAUSIA SECRET TURITE Rhk hayhrpuap thuv tfsptphbzph tplzaą įyhšfrpal 35.39774 rchkyhab qlp nhbuhzp nhsl 0,99999 whyhšfrpal   
+
+
+į ufwnspynx xzfuafqnsyf xpfnčnų uae. gzat 3333,9999 yzwn gūyn 3334
+
+
+Čia yra hintas kaip gauti atsakymą ir atrakinti tą 
 
 MEGA SUPER DUPER SECRET įsidemėkite į tarpą, nes tai kažką atskiria (Raides kurios eina po tarpo tame užšifruotame hinte reikia iššifruoti su preitu Cezario raktu, o prieš tarpą su kitokiu raktu. Raikto numeris yra virš 5. )
 
