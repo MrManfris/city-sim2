@@ -20,5 +20,7 @@ Prašau rašykite skillų pavadinimus iš mažosios raidės ir prašau  naudokit
 
 Yra ir blogų endingų kurios jūs patys rasite.
 
+Už kiekvieną gyventoją pajamos didėja ant 1(Užmiršau apie tai įspėti).
+
 Jei kas neveikia iškarto sakykite negaiškite laiko!
 ¡Buena suerte!
