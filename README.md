@@ -6,8 +6,11 @@ Pagrindinė užduotis yra prižiūrėti miestą ir gauti vieną iš endingų. 1 
 
 Yra 3 secretai viena iš secretų rasite ufxnwnspnrztxj, sjx ojn ljwfn įxnžnūwėxnyj ufrfydxnyj ywnx xpfnčnzx pzwntx wjnpnf įwfšdyn į ufxnwnspnrzx, t pnyfr wjnpnf anjsf xpfnčnų ufpjnxyn pnyz. (Cezario šifras raktas  SSSSSSS5SSSSSS kažkur  tarp S raidžių)
 
-KAD ATRAKINTI  3 PASLAPTINGIAUSIA SECRET TURITE Rhk hayhrpuap thuv tfsptphbzph tplzaą įyhšfrpal 35.39774 rchkyhab qlp nhbuhzp nhsl 0,99999 whyhšfrpal   
+KAD ATRAKINTI  3 PASLAPTINGIAUSIA SECRET TURITE 
 
+Rhk hayhrpuap thuv tfsptphbzph tplzaą įyhšfrpal 35.39774 rchkyhab qlp nhbuhzp nhsl 0,99999 whyhšfrpal   
+
+                              -----------Tarpas--------------
 
 į ufwnspynx xzfuafqnsyf xpfnčnų uae. gzat 3333,9999 yzwn gūyn 3334
 
