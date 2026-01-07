@@ -305,7 +305,7 @@ def secret_ending3(city):
     print("\n*** Creator home (Klaipėda)! ***")
     print("\nTau pasirinkus 1253 prie tavęs atsirado pasaulio dievas (Creator of the game) ir įtempė tave į portalą kuris vedė į juo namus Klaipėda.\nIr jis jums įsakė prižiūrėti Klaipėda kol jis nesugrįš iš juo dieviškųjų atostogų.")
     city["populiacija"] = 500
-    city["pinigai"] = 50000
+    city["pinigai"] = 10000
     city["tarša"] = 0
     city["happy"] = 100
     city["buildings"] = []
@@ -435,9 +435,11 @@ while True:
         print("Ačiū, kad žaidėte!")
         break
     
-
+    if city.type == "klaipeda" and city["diena"] == 100:
+        print(f"\nKai atėjo 100-oji diena kažkas padėjo savo ranką ant jūsų peties ir jūs lėtai atsisukote tai buvo pasaulio dievas grįžęs iš savo atostogų.\n JIs padėkojo jums už jūsų pagalbą ir jūs grąžino į jūsų miestą.\n Miesto jūs  jau nebevaldote, bet jums dievas padovonojo už pagalbą vila ir kortelę su nesuskaičiojamu kiekiu pinigų ir jūs išėjote į pensiją\n Dievo miestą išlaikėte  {city["diena"]} dienų.\n Turėjote {city["pinigai"]} pinigų.\n Gyventojų džiaugsmo lygis buvo {city["happy"]}.\n Dievo miesto gyventojų pajamos: {income}.\n Štai kokius pastatus turėjote: {counts}.\n  Pasaulio dievas dėkoja jums už jūsų pagalbą ir atsisveikina su jumis.")
+        break
     if city["tarša"] >= 100:
-        print(f"\n Jūsų miesto taršos lygis pakilo taip stipriai, kad miesto išlaikyti nebeįmanoma.\n Išlaikėtė miestą {city["diena"]} dienų.\n Turėjote {city["pinigai"]} pinigų.\n Gyventojų džiaugsmo lygis buvo {city["happy"]}.\n Jūsų miesto gyventojų pajamos: {income}.\n Štai kokius pastatus turėjote: {counts}.\n Ačiū, kad žaidėte!")
+        print(f"\nJūsų miesto taršos lygis pakilo taip stipriai, kad miesto išlaikyti nebeįmanoma.\n Išlaikėtė miestą {city["diena"]} dienų.\n Turėjote {city["pinigai"]} pinigų.\n Gyventojų džiaugsmo lygis buvo {city["happy"]}.\n Jūsų miesto gyventojų pajamos: {income}.\n Štai kokius pastatus turėjote: {counts}.\n Ačiū, kad žaidėte!")
         break
     if city["populiacija"] <= 0:
         print(f"\nJūs neišlaikėtė savo miesto.\n Išlaikėtė miestą {city["diena"]} dienų.\n Turėjote {city["pinigai"]} pinigų.Gyventojų džiaugsmo lygis buvo {city["happy"]}\n Jūsų miesto gyventojų pajamos: {income}.\n Štai kokius pastatus turėjote: {counts}.\n Ačiū, kad žaidėte!")
